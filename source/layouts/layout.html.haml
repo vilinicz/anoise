@@ -33,8 +33,12 @@
 
     -# Stylesheets
     = stylesheet_link_tag 'application'
+
+    %link{:href => "http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css", :rel => "stylesheet"}/
   %body{class: current_page.data.body_class || 'page'}
-    = yield
+    #layout.pure-g
+      = partial 'sidebar'
+      = yield
     -# Javascripts
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
