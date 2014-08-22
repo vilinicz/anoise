@@ -37,10 +37,11 @@
     %link{:href => "http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css", :rel => "stylesheet"}/
   %body{class: current_page.data.body_class || 'page'}
     #layout.pure-g
-      %video#video_background{:autoplay => "true", :loop => "loop", :muted => "muted", :preload => "auto", :volume => "0"}
+      %video#video_background.fadein{:autoplay => "true", :loop => "loop", :muted => "muted", :preload => "auto", :volume => "0"}
         %source{:src => "video/vid1.mp4", :type => "video/mp4"}
           Video not supported
       #video_pattern
+
       = partial 'sidebar'
       = yield
     -# Javascripts

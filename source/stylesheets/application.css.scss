@@ -68,7 +68,8 @@ h3 {
 .brand-title {
     text-transform: uppercase;
     margin-bottom: 4%;
-    letter-spacing: 0em;
+    letter-spacing: -1px;
+    text-shadow: 3px 0px $black;
 }
 .brand-tagline {
     font-weight: 500;
@@ -107,6 +108,7 @@ h3 {
     color: $white;
     border-bottom: 1px solid $white;
     text-decoration: none;
+    background-color: $black;
     @include transition (all 0.5s ease-in-out);
 }
 
@@ -158,6 +160,8 @@ h3 {
 
     .brand-title {
         margin-bottom: 0%;
+        font-size: 150%;
+        border-right: 5px solid $silver;
     }
 
     .sidebar {
@@ -166,6 +170,7 @@ h3 {
         bottom: 0;
         overflow: auto;
         //outline: none;
+        border-right: 1px solid $gray;
     }
 
     .nav-item {
