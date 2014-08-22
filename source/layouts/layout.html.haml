@@ -37,12 +37,21 @@
     %link{:href => "http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css", :rel => "stylesheet"}/
   %body{class: current_page.data.body_class || 'page'}
     #layout.pure-g
+      %video#video_background{:autoplay => "true", :loop => "loop", :muted => "muted", :preload => "auto", :volume => "0"}
+        %source{:src => "video/vid1.mp4", :type => "video/mp4"}
+          Video not supported
+      #video_pattern
       = partial 'sidebar'
       = yield
     -# Javascripts
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'
     = javascript_include_tag 'application'
+
+    = javascript_include_tag 'lib/jquery.nicescroll.js'
+
+    
 
     - if build?
       -# Google Analytics
