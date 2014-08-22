@@ -46,9 +46,14 @@
 #     "Helping"
 #   end
 # end
+##########################################
+
 
 # Use LiveReload
 activate :livereload
+
+# Use Bourbon
+activate :bourbon
 
 # Compass configuration
 set :css_dir, 'stylesheets'
@@ -57,31 +62,24 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-# Build-specific configuration
+
+# Build settings
 configure :build do
-  ignore 'images/*.psd'
-  ignore 'stylesheets/lib/*'
-  ignore 'stylesheets/vendor/*'
-  ignore 'javascripts/lib/*'
-  ignore 'javascripts/vendor/*'
+  activate :relative_assets
+  #activate :directory_indexes
+  activate :asset_hash
+  #activate :neat
 
-  # For example, change the Compass output style for deployment
   activate :minify_css
-
-  # Minify Javascript on build
   activate :minify_javascript
+  activate :gzip
+ 
+  # Change to your Google Analytics key (e.g. UA-XXXXX-Y)
+  # To disable GA, leave unset or set to nil
+  set :ga_key, nil
 
-  # Enable cache buster
-  # activate :cache_buster
+end
 
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
-
-  # Or use a different image path
-  # set :http_path, "/Content/images/"
+activate :deploy do |deploy|
+  deploy.method = :git
 end

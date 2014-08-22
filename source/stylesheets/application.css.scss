@@ -1,8 +1,21 @@
+@import 'bourbon';
 @import 'pure-min';
 @import 'clrs';
 @import 'font-awesome';
 @import '_modules/*';
 
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic);
+
+
+body {
+    font-family: $monospace;
+    background: url(../images/wall6.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+.pure-g [class*="pure-u"]{
+    font-family: $monospace;
+}
 
 * {
     -webkit-box-sizing: border-box;
@@ -36,12 +49,13 @@ h3 {
 .header {
     text-align: center;
     top: auto;
-    margin: 3em auto;
+    margin: 1em auto;
 }
 
 .sidebar {
     background: $navy;
     color: #fff;
+    padding: 1em;
 }
 
 .brand-title,
@@ -50,10 +64,15 @@ h3 {
 }
 .brand-title {
     text-transform: uppercase;
+    margin-bottom: 4%;
 }
 .brand-tagline {
-    font-weight: 300;
-    color: rgb(176, 202, 219);
+    font-weight: 500;
+    font-size: 100%;
+    color: #aaa;//rgb(176, 202, 219);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 5%;
 }
 
 .nav-list {
@@ -66,19 +85,24 @@ h3 {
     *display: inline;
     zoom: 1;
 }
+
 .nav-item a {
     background: transparent;
-    border: 2px solid rgb(176, 202, 219);
-    color: #fff;
+    border-bottom: 1px solid rgba(176, 202, 219, 0.4);
+    color: #ccc;
     margin-top: 1em;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    //text-transform: uppercase;
     font-size: 85%;
+    font-weight: 700;
+
 }
 .nav-item a:hover,
 .nav-item a:focus {
-    border: 2px solid rgb(61, 146, 201);
+    color: $white;
+    border-bottom: 1px solid $white;
     text-decoration: none;
+    @include transition (all 0.5s ease-in-out);
 }
 
 .content-subhead {
@@ -92,7 +116,7 @@ h3 {
 }
 
 .content {
-    padding: 2em 1em 0;
+    padding: 2em;
 }
 
 
@@ -112,19 +136,29 @@ h3 {
 
 @media (min-width: 48em) {
     .content {
-        padding: 2em 3em 0;
-        margin-left: 25%;
+        padding: 2em 0 0;
+        margin-left: 20%;
     }
 
     .header {
-        margin: 80% 2em 0;
+        margin: 10% 2em 0;
         text-align: right;
+    }
+
+    .brand-tagline {
+        margin-top: 33%;
     }
 
     .sidebar {
         position: fixed;
         top: 0;
         bottom: 0;
+    }
+
+    .nav-item {
+      display: list-item;
+      //*display: inline;
+      margin-top: 5%;
     }
 }
 
