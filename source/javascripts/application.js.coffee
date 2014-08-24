@@ -4,9 +4,9 @@
 
 
 $(document).ready ->
-  $("#sidebar, html").niceScroll({
-    cursorcolor: "#fff"
-    cursorborder: "1px solid #2d2f56"
+  $("html").niceScroll({
+    cursorcolor: "#D0021B"
+    cursorborder: "1px solid #D0021B"
     cursorwidth: 7
     cursorfixedheight: 100
     autohidemode: false
@@ -16,3 +16,4 @@ $(document).ready ->
 
 $ ->
   $('.fadein').addClass 'load'
+

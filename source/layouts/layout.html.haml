@@ -8,11 +8,12 @@
 %html{lang: 'en', class: 'no-js'}
   /<![endif]
   %head
-    %title #{data.page.title || "The Middleman"}
+    %title #{data.page.title ? data.page.title + " | Григорий Чернявский - фотография и видеосъемка" : "Григорий Чернявский | Фотография и видеосъемка"}
     %meta(http-equiv="content-type" content="text/html" charset="utf-8")
     %meta(http-equiv="x-ua-compatible" content="ie=edge,chrome=1")
     %meta(name="description" content="")
     %meta(name="author" content="")
+
 
     -# Standard viewport tag to set the viewport to the device's width,
     -# Android 2.3 devices need this so 100% width works properly and
@@ -24,8 +25,11 @@
     %meta(name='apple-mobile-web-app-capable' content='yes')
     %meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
 
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
+    %link{:href => "images/favicon.ico", :rel => "icon", :type => "image/x-icon"}
+
     -# App Icons
-    %link(rel="shortcut icon" href="/images/favicon.ico")
+    %link(rel="shortcut icon" href="images/favicon.ico")
     %link(rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png")
     %link(rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57-precomposed.png")
     %link(rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png")
@@ -37,20 +41,22 @@
     %link{:href => "http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css", :rel => "stylesheet"}/
   %body{class: current_page.data.body_class || 'page'}
     #layout.pure-g
-      %video#video_background.fadein{:autoplay => "true", :loop => "loop", :muted => "muted", :preload => "auto", :volume => "0"}
-        %source{:src => "video/vid1.mp4", :type => "video/mp4"}
-          Video not supported
-      #video_pattern
-
-      = partial 'sidebar'
-      = yield
+      //= partial 'sidebar'
+      .pure-u-1
+        = partial 'header'
+      .content.pure-u-1
+        = yield
+      .pure-u-1
+        = partial 'footer'
     -# Javascripts
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'
     = javascript_include_tag 'application'
 
-    = javascript_include_tag 'lib/jquery.nicescroll.js'
+    /= javascript_include_tag 'lib/jquery.nicescroll.js'
+
+    /= javascript_include_tag 'lib/jquery.wookmark.js'
 
     
 
@@ -61,3 +67,4 @@
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
+

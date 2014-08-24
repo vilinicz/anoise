@@ -1,0 +1,189 @@
+@import 'bourbon';
+@import 'clrs';
+@import 'pure-min';
+@import 'font-awesome';
+@import '_modules/*';
+
+.header {
+  vertical-align: bottom;
+  
+}
+
+
+.brand-triangle {
+  text-align: left;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7em 10em 0 0;
+  border-color: #d0021a transparent transparent transparent;
+  @include transition (all 0.5s ease-in-out);
+  &:hover {
+    color: #fff;
+    border-color: #fff transparent transparent transparent;
+  }
+
+}
+
+.brand-contact {
+  text-align: right;
+  padding-top: 4%;
+  padding-right: 10%;
+  padding-bottom: 0;
+  font-size: 1.5em;
+  font-weight: 800;
+  vertical-align: bottom;
+
+    a {
+    border-right: 5px solid #fff;
+    text-transform: none;
+    text-decoration: none;
+    color: #fff;
+    @include transition (all 0.5s ease-in-out);
+    &:hover {
+      color: #D0021B;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.nav {
+  //padding-right: 20%;
+  text-align: left;
+  vertical-align: bottom;
+  padding-top: 5%;
+  z-index: 10;
+
+  .nav-item a{
+    text-transform: none;
+    text-decoration: none;
+    color: #D0021B;
+    //text-transform: uppercase;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.header {
+
+  ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  //padding: 15px 4px 17px 0;
+  list-style: none;
+
+}
+ul li {
+  color: #D0021B;
+  font-size: 1.5em;
+  font-weight: 800;
+  display: inline-block;
+  margin-left: 4%;
+  position: relative;
+  padding: 0;
+  border-bottom: 5px solid #fff;
+  //background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 10;
+  i {
+    color: #fff;
+  }
+}
+ul li:hover {
+  //background: #555;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.5em;
+  border-bottom: 5px solid #fff;
+}
+ul li ul {
+  padding: 0;
+  margin-left: -6%;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 150px;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  //@include transition (all 0.5s ease-in-out);
+}
+ul li ul li { 
+  //background: #555; 
+  display: block; 
+  color: #D0021B;
+  font-size: 0.9em;
+  font-weight: 800;
+  border-bottom: 2px solid #D0021B;
+  //text-shadow: 0 -1px 0 #000;
+
+  a {
+    padding-top: 1%;
+    line-height: 30px;
+  }
+}
+ul li ul li:hover { 
+  color: #fff; 
+  font-size: 1em;
+}
+ul li:hover ul {
+  display: inline;
+  opacity: 1;
+  visibility: visible;
+}
+}
+
+@media (max-width: 48em) {
+
+  .brand-contact {
+  font-size: 0.9em;
+  padding-top: 1%;
+}
+
+
+  .brand-triangle {
+    border-width: 3em 4em 0 0;
+  }
+
+  .brand-title {
+    font-size: 1.8em;
+  }
+
+  .nav {
+    //padding-top: 23%;
+    //margin-left: -15%;
+  }
+
+  .header {
+
+    ul li {
+      font-size: 0.9em;
+      padding: 0% 0%;
+      margin: 0%;
+    }
+
+    ul li:hover {
+      font-size: 1em;
+    }
+
+    ul li ul {
+      top: 120%;
+      margin-left: 0;
+    }
+
+    ul li ul li:hover{
+      font-size: 1em;
+    }
+
+  }
+
+}

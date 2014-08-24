@@ -1,11 +1,17 @@
 #sidebar.sidebar.pure-u-1.pure-u-md-1-6
   .header#scrollme
-    %h1.brand-title Григорий Чернявский |
-    %strong +7_987_567_54_54
-    %h2.brand-tagline Фотоработы
+    %h1.brand-title 
+      =link_to "Григорий Чернявский", "/" |
+    %strong ________________
+    .brand-phone= link_to "+7_965_109_52_89", "tel:+79651095289"
+    %strong _________________
+    .brand-mail= link_to "arcticnoise@ya.ru", "mailto:arcticnoise@ya.ru"
+    %h2.tagline 
+      %i.fa.fa-video-camera
+      Видеоработы
     %nav.nav
       %ul.nav-list
-        %li.nav-item= link_to 'Портрет', '#'
+        %li.nav-item= link_to 'Портрет', '/video/portrait.html'
         %li.nav-item= link_to 'Репортаж', '#'
         %li.nav-item= link_to 'Предметы', '#'
         %li.nav-item= link_to 'Город', '#'
@@ -13,13 +19,15 @@
         %li.nav-item= link_to 'Животные', '#'
         %li.nav-item= link_to 'Спорт', '#'
 
-    %h2.brand-tagline Видеоработы
+    %h2.tagline 
+      %i.fa.fa-camera
+      Фотоработы
     %nav.nav
       %ul.nav-list
-        %li.nav-item= link_to 'Портрет', '#'
-        %li.nav-item= link_to 'Репортаж', '#'
-        %li.nav-item= link_to 'Предметы', '#'
-        %li.nav-item= link_to 'Город', '#'
-        %li.nav-item= link_to 'Сцена', '#'
-        %li.nav-item= link_to 'Животные', '#'
-        %li.nav-item= link_to 'Спорт', '#'
+        %li.nav-item{is_page_active?('/photo/portrait/')}= link_to 'Портрет',   '/photo/portrait.html'
+        %li.nav-item{is_page_active?('/photo/reportage/')}= link_to 'Репортаж',  '/photo/reportage.html'
+        %li.nav-item{is_page_active?('/photo/object/')}= link_to 'Предметы',  '/photo/object.html'   
+        %li.nav-item{is_page_active?('/photo/city/')}= link_to 'Город',     '/photo/city.html'     
+        %li.nav-item{is_page_active?('/photo/scene/')}= link_to 'Сцена',     '/photo/scene.html'    
+        %li.nav-item{is_page_active?('/photo/animals/')}= link_to 'Животные',  '/photo/animals.html'     
+        %li.nav-item{is_page_active?('/photo/sport/')}= link_to 'Спорт',     '/photo/sport.html'    
