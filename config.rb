@@ -6,19 +6,19 @@ activate :bourbon
 
 activate :directory_indexes
 
-
 # Compass configuration
-set :css_dir, 'stylesheets'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+set :videos_dir, 'assets/videos'
+set :fonts_dir, 'assets/fonts'
 
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
 
 
 # Build settings
 configure :build do
   set :relative_links, true
-
+  activate :directory_indexes
   activate :relative_assets
   #activate :directory_indexes
   activate :asset_hash

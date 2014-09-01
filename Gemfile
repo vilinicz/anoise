@@ -14,6 +14,6 @@ gem "middleman-bourbon"
 
 
 gem 'middleman-pure', :github => 'yterajima/middleman-pure'
-gem 'font-awesome-middleman'
+gem 'font-awesome-sass'
 
 gem 'clrs'

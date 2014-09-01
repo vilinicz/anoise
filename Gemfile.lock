@@ -30,8 +30,8 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.9.3)
-    font-awesome-middleman (4.1.1)
-      middleman-core (>= 3.0.0)
+    font-awesome-sass (4.2.0)
+      sass (~> 3.2)
     fssm (0.2.10)
     haml (4.0.2)
       tilt
@@ -135,7 +135,7 @@ PLATFORMS
 
 DEPENDENCIES
   clrs
-  font-awesome-middleman
+  font-awesome-sass
   middleman (~> 3.0.13)
   middleman-bourbon
   middleman-deploy

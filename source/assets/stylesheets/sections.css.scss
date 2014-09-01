@@ -1,0 +1,162 @@
+@import 'bourbon';
+@import 'clrs';
+@import 'pure-min';
+@import 'font-awesome';
+@import '_modules/*';
+
+
+
+//Photo Sections
+
+.photo-section {
+  color: #fff;
+  //padding-right: 2%;
+  //margin-right: 10%;
+  .section-name {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1em;
+    margin: 5% 0 5% 0;
+    padding-left: 1%;
+  }
+
+  ul {
+  list-style: none;
+
+    li:before {
+     content: "\00BB \0020";
+    }
+  }
+
+
+
+  #container {
+     //padding: 0;
+     //padding-right: 15%;
+     //padding-bottom: 20%;
+     padding-top: 1%;
+     padding-bottom: 55%;
+     display: inline-block;
+     width: 100%;
+     height: 100%;
+     background: rgba(0,0,0,0.5);
+     position: relative;
+     float: left;
+  }
+  
+  .element {
+    width: 33%;
+    //margin: 1%;
+    padding: 1%;
+    float: left;
+    font-size: 15px;
+    overflow: hidden;
+    //position: relative;
+    
+  
+  }
+
+  .element img {
+      display: block;
+      width: 100%;
+      z-index: 10;
+      //box-shadow: 0 0 5px $silver;
+  }
+ 
+
+  @media screen and (max-width: 48em) {
+    .section-name {
+      font-size: 1em;
+    }
+
+    .element {
+      width: 33%;
+    }
+
+  }
+}
+
+
+//Video
+
+.video-section {
+  color: $black;
+
+  //padding-right: 2%;
+  //margin-right: 10%;
+  .section-name {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1em;
+    margin: 5% 0 5% 0;
+    padding-left: 1%;
+  }
+
+
+  #container {
+     //padding: 0;
+     padding-right: 0.5%;
+     //padding-bottom: 20%;
+     padding-top: 1%;
+     padding-bottom: 55%;
+     display: inline-block;
+     width: 100%;
+     height: 100%;
+     background: rgba(0,0,0,0.5);
+     position: relative;
+     float: left;
+     //text-align: center;
+  }
+  
+  .element {
+    width: 48.5%;
+    margin: 0.5%;
+    padding: 1%;
+    float: left;
+    font-size: 15px;
+    overflow: hidden;
+    //position: relative;
+    
+  
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 36.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+ 
+
+  @media screen and (max-width: 48em) {
+    .section-name {
+      font-size: 1em;
+    }
+  }
+}
+
+.oops-section{
+  //padding: 15%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #666;
+
+  h1 {
+    font-size: 15em;
+    padding-bottom: -10%;
+    margin-bottom: -10%;
+  }
+  h2 {
+    font-size: 3em;
+  }
+}

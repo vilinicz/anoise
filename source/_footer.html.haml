@@ -1,0 +1,18 @@
+%footer.footer
+
+  .social
+    %ul
+          
+      = link_to "http://arcticnoise.tumblr.com", target: "_blank" do
+        %li 
+          %span.fa-stack.fa-lg
+            %i.fa.fa-square-o.fa-stack-2x
+            %i.fa.fa-tumblr.fa-stack-1x
+      = link_to "http://vk.com/arcticnoise_cm", target: "_blank" do  
+        %li
+          %span.fa-stack.fa-lg
+            %i.fa.fa-square-o.fa-stack-2x
+            %i.fa.fa-vk.fa-stack-1x
+
+    .author
+      %a{:href => "#", :onclick => "$.zoombox.html('<div class=yo><style> span{font-size:1.1em;} strong{font-size:3em; position: absolute; top: 25px; right: 25px;}</style><p><hr>Винцент Илинич</br>Дизайн и разработка<strong>&#9874;</strong></br><hr></br></br><span>∞ #{link_to "VKontakte", "http://vk.com/id103234803", target: "_blank"}</span> </br><span>∞ #{link_to "Github", "https://github.com/Ilinicz", target: "_blank"}</span></br><span>✉ vilinicz@mail.ru</span></br></p></div>',{theme:'darkprettyphoto',width:300,height:250, gallery: false}); return false;"} 
